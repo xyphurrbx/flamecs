@@ -135,6 +135,6 @@ export function query<T extends Array<unknown> = []>(
  * @returns A Query object that can be used to iterate over entities with the
  *   specified components.
  */
-export function queryRuntimeIds<T extends Array<Id>>(...ids: T): ecs.Query<ecs.InferComponents<T>> {
+export function queryRuntimeIds<T extends Array<ecs.Id>>(...ids: T): ecs.Query<T> {
 	return registry.query(...ids);
 }
