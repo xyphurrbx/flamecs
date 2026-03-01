@@ -81,9 +81,9 @@ export function removed<T>(key?: ComponentKey<T>): Signal<[Entity<T>]> {
  *   entity.
  * @metadata macro
  */
-export function changed<T>(key?: ComponentKey<T>): Signal<[Entity<T>, T]> {
+export function changed<T>(key?: ComponentKey<T>): Signal<[Entity<T>, ResolveValue<T>]> {
 	const id = component(key);
-	return signals.changed.get(id)! as Signal<[Entity<T>, T]>;
+	return signals.changed.get(id)! as Signal<[Entity<T>, ResolveValue<T>]>;
 }
 
 function hookListeners(id: Entity): void {
