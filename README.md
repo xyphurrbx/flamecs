@@ -11,18 +11,24 @@ Flamework + ECS = Flamecs 🔥
 
 ## Installation
 
-This package is an extension of Flamework and it must be installed and configured. If Flamework is already installed, you can install `@rbxts/flamecs` and skip these steps.
+This package is an extension of Flamework and it must be installed and configured. If Flamework is already installed, you can install `@xyphurrbx/flamecs` and skip these steps.
 
 ### Install Flamework packages
 
-You can install all the necessary packages using the following command.
+First, add the GitHub Packages registry for the `@xyphurrbx` scope to your project's `.npmrc`:
+
+```
+@xyphurrbx:registry=https://npm.pkg.github.com
+```
+
+Then install the necessary packages:
 
 ```bash
 npm install -D rbxts-transformer-flamework
 npm install @flamework/core
 
 # Install flamecs, if it isn't already
-npm install @rbxts/flamecs
+npm install @xyphurrbx/flamecs
 ```
 
 ### Configure the transformer
